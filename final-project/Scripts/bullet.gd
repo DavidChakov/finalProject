@@ -8,6 +8,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	# Has player follow mouse
-	self.position = get_global_mouse_position()
-	pass
+	
+	# Moves bullet based off rotation
+	# Vector (XY movement) rotates based off rotation
+	self.position += Vector2(1, 0).rotated(self.rotation)
+	
+	if ($RayCast2D.is_colliding()):
+		print("Hit")
