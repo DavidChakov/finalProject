@@ -12,6 +12,7 @@ offset_left = -17.0
 offset_top = -16.0
 offset_right = 1164.0
 offset_bottom = 660.0
+color = Color(0, 0, 0, 1)
 
 [node name="Player" parent="." instance=ExtResource("2_qxrlw")]
 

@@ -11,7 +11,7 @@ scale = Vector2(0.2, 0.2)
 script = ExtResource("1_cvnsp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.47326696, 0.18570831, 0.19478506, 1)
+modulate = Color(0.8901961, 0.1764706, 0.15686275, 1)
 texture = ExtResource("1_v0iea")
 
 [node name="Area2D" type="Area2D" parent="."]

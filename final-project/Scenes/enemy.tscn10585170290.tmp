@@ -11,6 +11,6 @@ script = ExtResource("1_1f0kj")
 modulate = Color(15.850012, 15.850012, 15.850012, 1)
 texture = ExtResource("1_hghv2")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer1" type="Timer" parent="."]
 
-[connection signal="timeout" from="Timer" to="." method="timeout"]
+[connection signal="timeout" from="Timer1" to="." method="timeout1"]
