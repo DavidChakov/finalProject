@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://6u2va0cwiipa"]
+[gd_scene load_steps=6 format=3 uid="uid://6u2va0cwiipa"]
 
 [ext_resource type="Script" uid="uid://b811lcdj8g2u6" path="res://Scripts/game.gd" id="1_ebmjs"]
+[ext_resource type="PackedScene" uid="uid://ciqpbhxf13tmh" path="res://Scenes/enemy_tracker.tscn" id="2_3dryh"]
 [ext_resource type="PackedScene" uid="uid://dr38lx5op1k1x" path="res://Scenes/player.tscn" id="2_qxrlw"]
 [ext_resource type="PackedScene" uid="uid://6bhtqkeyp6bn" path="res://Scenes/enemy.tscn" id="3_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://e0bhjf87tt2b" path="res://Scenes/bullet_default.tscn" id="5_wowpa"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_ebmjs")
@@ -15,6 +17,14 @@ offset_bottom = 660.0
 color = Color(0, 0, 0, 1)
 
 [node name="Player" parent="." instance=ExtResource("2_qxrlw")]
+position = Vector2(1.5258789e-05, 1.5258789e-05)
+scale = Vector2(0.19999999, 0.19999999)
 
 [node name="Enemy" parent="." instance=ExtResource("3_wrm1d")]
 position = Vector2(200, 200)
+
+[node name="EnemyTracker" parent="." instance=ExtResource("2_3dryh")]
+position = Vector2(566.99994, 291.99997)
+scale = Vector2(0.39999998, 0.39999998)
+
+[node name="Bullet" parent="." instance=ExtResource("5_wowpa")]
