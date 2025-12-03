@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://6bhtqkeyp6bn"]
+
+[ext_resource type="Script" uid="uid://cr7pw2ac1duic" path="res://Scripts/enemy.gd" id="1_1f0kj"]
+[ext_resource type="Texture2D" uid="uid://cpbides33mcu2" path="res://icon.svg" id="1_hghv2"]
+
+[node name="Enemy" type="Node2D"]
+scale = Vector2(0.4, 0.4)
+script = ExtResource("1_1f0kj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(15.850012, 15.850012, 15.850012, 1)
+texture = ExtResource("1_hghv2")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="timeout"]

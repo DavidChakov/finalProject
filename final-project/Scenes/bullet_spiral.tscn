@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1evjsxadvvth"]
+
+[ext_resource type="Script" uid="uid://t865s0ivo6fr" path="res://Scripts/bullet_spiral.gd" id="1_5a5sq"]
+[ext_resource type="Texture2D" uid="uid://cpbides33mcu2" path="res://icon.svg" id="2_wusbj"]
+
+[node name="Bullet Spiral" type="Node2D"]
+script = ExtResource("1_5a5sq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(18.892157, 18.892157, 18.892157, 0.92941177)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_wusbj")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(-6, -6)
+target_position = Vector2(12, 12)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(8, 8)
+rect = Rect2(-10, -10, 4, 4)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="screen_exited"]
