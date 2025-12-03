@@ -16,7 +16,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	pass
+	# Enemy alwats faces towards player
+	look_at(Vector2(player.position.x, player.position.y))
 
 # Spawns bullets
 func spawn_bullets():

@@ -4,6 +4,8 @@ extends Node2D
 # Loads bullet scene into var bullet_scene
 var bullet_scene = load("res://Scenes/bullet_spiral.tscn")
 var shoot_timer = .3
+var rotate_speed = .5
+var move_speed = 20
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,7 +16,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	# Rotates the enemy
-	rotate(.5 * delta)
+	rotate(rotate_speed * delta)
+	
+	self.position.x += move_speed * delta
 
 # Spawns bullets
 func spawn_bullets():
