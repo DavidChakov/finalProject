@@ -3,11 +3,12 @@ extends Node2D
 
 # Loads bullet scene into var bullet_scene
 var bullet_scene = load("res://Scenes/bullet_spiral.tscn")
+var shoot_timer = .3
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# Calls timeout() function every X seconds
-	$Timer.set_wait_time(.3)
+	$Timer.set_wait_time(shoot_timer)
 	$Timer.start()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
