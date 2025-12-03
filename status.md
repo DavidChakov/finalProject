@@ -2,15 +2,11 @@
 
 #### Your name
 
-TODO
-
-#### Your section leader's name
-
-TODO
+David Chakov
 
 #### Project title
 
-TODO
+Escape from the Abyss (Will probably change)
 
 ***
 
@@ -18,12 +14,12 @@ Short answers for the below questions suffice. If you want to alter your plan fo
 
 #### What have you done for your project so far?
 
-TODO
+Created a player and enemy that shoots projectiles in a rotating pattern. Detects if the player gets hit by the projectile, though does not yet do anyth8ing with that information.
 
 #### What have you not done for your project yet?
 
-TODO
+Currently working on an enemy that shoots projectiles that track the player. Would like to design pixel art and add a timer and hit points.
 
 #### What problems, if any, have you encountered?
 
-TODO
+Struggling to figure out the code to create tracking projectiles. Will need to mess around more. No major problems.
