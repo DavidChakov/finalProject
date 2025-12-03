@@ -20,7 +20,10 @@ position = Vector2(1.5258789e-05, 1.5258789e-05)
 scale = Vector2(0.19999999, 0.19999999)
 
 [node name="Enemy Seeker" parent="." instance=ExtResource("3_wrm1d")]
-position = Vector2(577, 334)
+position = Vector2(1112, 308)
 
 [node name="Enemy Spiral" parent="." instance=ExtResource("4_3dryh")]
-position = Vector2(332, 187)
+position = Vector2(3.000002, 106)
+
+[node name="Enemy Spiral2" parent="." instance=ExtResource("4_3dryh")]
+position = Vector2(14, 499.99997)
