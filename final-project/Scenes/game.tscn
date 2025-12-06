@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://6u2va0cwiipa"]
+[gd_scene load_steps=6 format=3 uid="uid://6u2va0cwiipa"]
 
 [ext_resource type="Script" uid="uid://b811lcdj8g2u6" path="res://Scripts/game.gd" id="1_ebmjs"]
 [ext_resource type="PackedScene" uid="uid://dr38lx5op1k1x" path="res://Scenes/player.tscn" id="2_qxrlw"]
 [ext_resource type="Script" uid="uid://ft2ihdakb7ma" path="res://Scripts/enemy_spawner.gd" id="3_wrm1d"]
 [ext_resource type="FontFile" uid="uid://b1bjjui7qcytb" path="res://Sprites/Anta-Regular.ttf" id="4_3dryh"]
+[ext_resource type="PackedScene" uid="uid://b6l417xt7ieeo" path="res://Scenes/portal.tscn" id="5_wowpa"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_ebmjs")
@@ -34,5 +35,7 @@ theme_override_font_sizes/font_size = 32
 text = "SHIELDS ARE FULLY OPERATIONAL."
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Portal" parent="." instance=ExtResource("5_wowpa")]
 
 [connection signal="timeout" from="SeekerSpawner/Timer" to="SeekerSpawner" method="timeout"]
