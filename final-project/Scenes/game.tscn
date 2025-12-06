@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://b811lcdj8g2u6" path="res://Scripts/game.gd" id="1_ebmjs"]
 [ext_resource type="PackedScene" uid="uid://dr38lx5op1k1x" path="res://Scenes/player.tscn" id="2_qxrlw"]
-[ext_resource type="PackedScene" uid="uid://6bhtqkeyp6bn" path="res://Scenes/enemy_seeker.tscn" id="3_wrm1d"]
-[ext_resource type="PackedScene" uid="uid://dyq1p45x1sw0s" path="res://Scenes/enemy_spiral.tscn" id="4_3dryh"]
+[ext_resource type="Script" uid="uid://ft2ihdakb7ma" path="res://Scripts/enemy_spawner.gd" id="3_wrm1d"]
+[ext_resource type="FontFile" uid="uid://b1bjjui7qcytb" path="res://Sprites/Anta-Regular.ttf" id="4_3dryh"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_ebmjs")
@@ -19,11 +19,20 @@ color = Color(0, 0, 0, 1)
 position = Vector2(1.5258789e-05, 1.5258789e-05)
 scale = Vector2(0.19999999, 0.19999999)
 
-[node name="Enemy Seeker" parent="." instance=ExtResource("3_wrm1d")]
-position = Vector2(1112, 308)
+[node name="SeekerSpawner" type="Node2D" parent="."]
+script = ExtResource("3_wrm1d")
 
-[node name="Enemy Spiral" parent="." instance=ExtResource("4_3dryh")]
-position = Vector2(3.000002, 106)
+[node name="Timer" type="Timer" parent="SeekerSpawner"]
 
-[node name="Enemy Spiral2" parent="." instance=ExtResource("4_3dryh")]
-position = Vector2(14, 499.99997)
+[node name="Health Label" type="Label" parent="."]
+offset_left = 118.0
+offset_top = 4.0
+offset_right = 1078.0
+offset_bottom = 644.0
+theme_override_fonts/font = ExtResource("4_3dryh")
+theme_override_font_sizes/font_size = 32
+text = "SHIELDS ARE FULLY OPERATIONAL."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="timeout" from="SeekerSpawner/Timer" to="SeekerSpawner" method="timeout"]

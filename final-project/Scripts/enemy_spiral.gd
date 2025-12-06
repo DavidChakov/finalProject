@@ -17,8 +17,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	# Rotates the enemy
 	rotate(rotate_speed * delta)
-	
-	self.position.x += move_speed * delta
+	self.position.y += move_speed * delta
 
 # Spawns bullets
 func spawn_bullets():

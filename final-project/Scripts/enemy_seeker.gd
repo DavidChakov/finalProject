@@ -4,20 +4,26 @@ extends Node2D
 # Loads bullet scene into var bullet_scene
 var bullet_scene = load("res://Scenes/bullet_seeker.tscn")
 var shoot_timer = .4
+var move_speed = 50
+var health = 10
+
+var type = "ENEMY"
 
 # Links var player to player node on ready
-@onready var player = get_parent().get_node("Player")
+@onready var player = get_parent().get_parent().get_node("Player")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	# Calls timeout() function every X seconds
-	$Timer.set_wait_time(shoot_timer)
-	$Timer.start()
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	# Enemy alwats faces towards player
 	look_at(Vector2(player.position.x, player.position.y))
+	self.position.y += move_speed * delta
+	
+	if health <= 0:
+		queue_free()
 
 # Spawns bullets
 func spawn_bullets():
@@ -27,8 +33,14 @@ func spawn_bullets():
 		var bullet = bullet_scene.instantiate()
 		bullet.position = self.position
 		bullet.dir = Vector2(player.position.x - self.position.x, player.position.y - self.position.y).normalized()
-		
 		get_parent().add_child(bullet)
 
 func timeout() -> void:
 	spawn_bullets()
+
+func screen_entered() -> void:
+	$Timer.set_wait_time(shoot_timer)
+	$Timer.start()
+
+func screen_exited() -> void:
+	queue_free()

@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://nblfs2x8k288"]
+
+[ext_resource type="Script" uid="uid://ck5hgif8tgv36" path="res://Scripts/player_bullet.gd" id="1_3m2mg"]
+[ext_resource type="Texture2D" uid="uid://cpbides33mcu2" path="res://Sprites/icon.svg" id="2_jskx8"]
+
+[node name="Player Bullet" type="Node2D"]
+script = ExtResource("1_3m2mg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 5.240168, 10.493755, 0.92941177)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_jskx8")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(-6, -6)
+target_position = Vector2(12, 12)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(8, 8)
+rect = Rect2(-10, -10, 4, 4)
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="screen_exited"]
+[connection signal="timeout" from="Timer" to="." method="timeout"]

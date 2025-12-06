@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b1evjsxadvvth"]
 
 [ext_resource type="Script" uid="uid://t865s0ivo6fr" path="res://Scripts/bullet_spiral.gd" id="1_5a5sq"]
-[ext_resource type="Texture2D" uid="uid://cpbides33mcu2" path="res://icon.svg" id="2_wusbj"]
+[ext_resource type="Texture2D" uid="uid://cpbides33mcu2" path="res://Sprites/icon.svg" id="2_wusbj"]
 
 [node name="Bullet Spiral" type="Node2D"]
 script = ExtResource("1_5a5sq")

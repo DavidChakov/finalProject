@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dyq1p45x1sw0s"]
 
 [ext_resource type="Script" uid="uid://cast50p5003fa" path="res://Scripts/enemy_spiral.gd" id="1_fflpm"]
-[ext_resource type="Texture2D" uid="uid://cpbides33mcu2" path="res://icon.svg" id="2_2ie1l"]
+[ext_resource type="Texture2D" uid="uid://cpbides33mcu2" path="res://Sprites/icon.svg" id="2_2ie1l"]
 
 [node name="Enemy Spiral" type="Node2D"]
 scale = Vector2(0.4, 0.4)
