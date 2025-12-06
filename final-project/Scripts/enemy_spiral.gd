@@ -1,23 +1,32 @@
 # SPIRAL
 extends Node2D
 
+var type = "ENEMY"
+
 # Loads bullet scene into var bullet_scene
 var bullet_scene = load("res://Scenes/bullet_spiral.tscn")
-var shoot_timer = .3
-var rotate_speed = .5
-var move_speed = 20
+var shoot_timer = .54
+var rotate_speed = .4
+var move_speed = 50
+var health = 5
+var swap_dir = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	# Calls timeout() function every X seconds
-	$Timer.set_wait_time(shoot_timer)
-	$Timer.start()
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	# Rotates the enemy
 	rotate(rotate_speed * delta)
-	self.position.y += move_speed * delta
+	
+	if swap_dir % 2 != 0:
+		self.position.x += move_speed * delta
+	else:
+		self.position.x -= move_speed * delta
+	
+	if health <= 0:
+		queue_free()
 
 # Spawns bullets
 func spawn_bullets():
@@ -44,3 +53,10 @@ func spawn_bullets():
 
 func timeout() -> void:
 	spawn_bullets()
+
+func screen_entered() -> void:
+	$Timer.set_wait_time(shoot_timer)
+	$Timer.start()
+
+func screen_exited() -> void:
+	swap_dir += 1

@@ -45,4 +45,4 @@ func spawn_timeout() -> void:
 	self.position = Vector2(randf_range(110,1000),randf_range(100,550))
 
 func win_timeout() -> void:
-	print("YOU WIN!")
+	get_tree().change_scene_to_file("res://Scenes/win_screen.tscn")

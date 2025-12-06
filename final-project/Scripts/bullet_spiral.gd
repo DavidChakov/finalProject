@@ -15,7 +15,14 @@ func _process(_delta: float) -> void:
 	self.position += dir.rotated(self.rotation)
 	
 	if ($RayCast2D.is_colliding()):
-		print("Hit Spiral")
+		var collide = $RayCast2D.get_collider().get_parent()
+		if (collide.type == "PLAYER"):
+			queue_free()
+			
+			collide.health -= 1
+			if collide.health >= 0:
+				print(collide.health)
+				collide.advance_health_status()
 
 func screen_exited() -> void:
 	queue_free()

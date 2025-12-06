@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgsbydur7trpp"]
+
+[ext_resource type="Script" uid="uid://b15nxwtkollx6" path="res://Scripts/lose_screen.gd" id="1_488pv"]
+[ext_resource type="FontFile" uid="uid://b1bjjui7qcytb" path="res://Sprites/Anta-Regular.ttf" id="1_s2rrh"]
+
+[node name="LoseScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_488pv")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 1153.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 201.0
+offset_top = 55.0
+offset_right = 957.0
+offset_bottom = 260.0
+theme_override_fonts/font = ExtResource("1_s2rrh")
+theme_override_font_sizes/font_size = 82
+text = "CONNECTION LOST
+GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ContinueButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 476.0
+offset_top = 350.0
+offset_right = 676.0
+offset_bottom = 450.0
+theme_override_fonts/font = ExtResource("1_s2rrh")
+theme_override_font_sizes/font_size = 45
+text = "Continue
+"
+
+[connection signal="pressed" from="ContinueButton" to="." method="button_pressed"]

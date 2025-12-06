@@ -19,7 +19,4 @@ collide_with_bodies = false
 position = Vector2(8, 8)
 rect = Rect2(-10, -10, 4, 4)
 
-[node name="Timer" type="Timer" parent="."]
-
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="screen_exited"]
-[connection signal="timeout" from="Timer" to="." method="timeout"]

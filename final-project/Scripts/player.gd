@@ -14,7 +14,7 @@ var speed = 400
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	self.position.x = 625
+	self.position.x = 576
 	self.position.y = 400
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -37,8 +37,7 @@ func _process(_delta: float) -> void:
 		bullet.position = self.position
 	
 	if health < 1:
-		print("YOU LOSE")
-
+		get_tree().change_scene_to_file("res://Scenes/lose_screen.tscn")
 # Detects movememnt inputs
 func get_input():
 	# Checks for WASDD movement

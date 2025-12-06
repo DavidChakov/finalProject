@@ -17,18 +17,9 @@ func _process(delta: float) -> void:
 		var collide = $RayCast2D.get_collider().get_parent()
 		if (collide.type == "ENEMY"):
 			queue_free()
-			print("HIT!")
-			
 			collide.health -= 1
-			if collide.health > 0:
-				print(collide.health)
 		else:
 			pass
 	
-
 func screen_exited() -> void:
 	queue_free()
-
-
-func timeout() -> void:
-	pass # Replace with function body.

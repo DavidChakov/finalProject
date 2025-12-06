@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://cr7pw2ac1duic" path="res://Scripts/enemy_seeker.gd" id="1_1f0kj"]
 [ext_resource type="Texture2D" uid="uid://cdydavurw4ftq" path="res://Sprites/enemy_seeker.png" id="2_2tl66"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2tl66"]
-size = Vector2(125, 125.000015)
+[sub_resource type="CircleShape2D" id="CircleShape2D_2tl66"]
+radius = 62.948402
 
 [node name="Enemy Seeker" type="Node2D"]
 scale = Vector2(0.4, 0.4)
@@ -24,9 +24,9 @@ texture = ExtResource("2_2tl66")
 position = Vector2(-1.9073486e-06, -1.9073486e-06)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1.9073486e-06, 1.9073486e-06)
+position = Vector2(5.0000014, 1.9073486e-06)
 scale = Vector2(0.99999976, 0.99999976)
-shape = SubResource("RectangleShape2D_2tl66")
+shape = SubResource("CircleShape2D_2tl66")
 
 [connection signal="timeout" from="Timer" to="." method="timeout"]
 [connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="screen_entered"]

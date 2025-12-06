@@ -1,15 +1,14 @@
 # SEEKER
 extends Node2D
 
+var type = "ENEMY"
+
 # Loads bullet scene into var bullet_scene
 var bullet_scene = load("res://Scenes/bullet_seeker.tscn")
 var shoot_timer = .4
 var move_speed = 50
 var health = 5
 var swap_dir = 1
-
-var type = "ENEMY"
-
 
 # Links var player to player node on ready
 @onready var player = get_parent().get_parent().get_node("Player")
