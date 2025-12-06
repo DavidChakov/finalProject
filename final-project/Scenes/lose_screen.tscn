@@ -21,13 +21,13 @@ color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 201.0
-offset_top = 55.0
-offset_right = 957.0
-offset_bottom = 260.0
+offset_left = 27.0
+offset_top = 49.0
+offset_right = 1127.0
+offset_bottom = 254.0
 theme_override_fonts/font = ExtResource("1_s2rrh")
 theme_override_font_sizes/font_size = 82
-text = "CONNECTION LOST
+text = "CONNECTION TO SHIP LOST
 GAME OVER"
 horizontal_alignment = 1
 vertical_alignment = 1

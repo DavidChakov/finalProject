@@ -20,6 +20,6 @@ func _process(delta: float) -> void:
 			collide.health -= 1
 		else:
 			pass
-	
+
 func screen_exited() -> void:
 	queue_free()

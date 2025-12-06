@@ -20,7 +20,6 @@ func _process(delta: float) -> void:
 			
 			collide.health -= 1
 			if collide.health >= 0:
-				print(collide.health)
 				collide.advance_health_status()
 
 

@@ -21,7 +21,6 @@ func _process(_delta: float) -> void:
 			
 			collide.health -= 1
 			if collide.health >= 0:
-				print(collide.health)
 				collide.advance_health_status()
 
 func screen_exited() -> void:
