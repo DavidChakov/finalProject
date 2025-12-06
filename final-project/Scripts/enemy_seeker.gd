@@ -5,7 +5,7 @@ extends Node2D
 var bullet_scene = load("res://Scenes/bullet_seeker.tscn")
 var shoot_timer = .4
 var move_speed = 50
-var health = 10
+var health = 5
 var swap_dir = 1
 
 var type = "ENEMY"
