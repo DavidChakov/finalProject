@@ -1,15 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://dyq1p45x1sw0s"]
 
 [ext_resource type="Script" uid="uid://cast50p5003fa" path="res://Scripts/enemy_spiral.gd" id="1_fflpm"]
-[ext_resource type="Texture2D" uid="uid://cpbides33mcu2" path="res://Sprites/icon.svg" id="2_2ie1l"]
+[ext_resource type="Texture2D" uid="uid://doni1fn62ev0c" path="res://Sprites/enemy_spiral.png" id="2_fflpm"]
 
 [node name="Enemy Spiral" type="Node2D"]
 scale = Vector2(0.4, 0.4)
 script = ExtResource("1_fflpm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(15.850012, 15.850012, 15.850012, 1)
-texture = ExtResource("2_2ie1l")
+scale = Vector2(4, 4)
+texture = ExtResource("2_fflpm")
 
 [node name="Timer" type="Timer" parent="."]
 

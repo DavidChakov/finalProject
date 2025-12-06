@@ -39,7 +39,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Portal" parent="." instance=ExtResource("5_wowpa")]
-position = Vector2(722.25574, 529.8617)
+position = Vector2(112.20743, 303.23807)
 
 [connection signal="timeout" from="SeekerSpawner/Wave One Timer" to="SeekerSpawner" method="wave_one_timeout"]
 [connection signal="timeout" from="SeekerSpawner/Wave Two Timer" to="SeekerSpawner" method="wave_two_timeout"]
