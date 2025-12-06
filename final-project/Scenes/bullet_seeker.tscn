@@ -1,19 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://e0bhjf87tt2b"]
 
 [ext_resource type="Script" uid="uid://br2405h1c5amc" path="res://Scripts/bullet_seeker.gd" id="1_jgufv"]
-[ext_resource type="Texture2D" uid="uid://cpbides33mcu2" path="res://Sprites/icon.svg" id="2_6fti5"]
+[ext_resource type="Texture2D" uid="uid://c376tr2m3patx" path="res://Sprites/enemy_bullet.png" id="2_jgufv"]
 
 [node name="Bullet Seeker" type="Node2D"]
 script = ExtResource("1_jgufv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(18.892157, 18.892157, 18.892157, 1)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_6fti5")
+texture = ExtResource("2_jgufv")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(-6, -6)
-target_position = Vector2(12, 12)
+position = Vector2(-4, -4)
+target_position = Vector2(8, 8)
 collide_with_areas = true
 collide_with_bodies = false
 
