@@ -35,6 +35,9 @@ func _process(_delta: float) -> void:
 		bullet.dir = Vector2(self.position.x - get_global_mouse_position().x, self.position.y - get_global_mouse_position().y).normalized()
 		get_parent().add_child(bullet)
 		bullet.position = self.position
+	
+	if health < 1:
+		print("YOU LOSE")
 
 # Detects movememnt inputs
 func get_input():

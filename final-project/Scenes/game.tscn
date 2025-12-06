@@ -23,7 +23,9 @@ scale = Vector2(0.19999999, 0.19999999)
 [node name="SeekerSpawner" type="Node2D" parent="."]
 script = ExtResource("3_wrm1d")
 
-[node name="Timer" type="Timer" parent="SeekerSpawner"]
+[node name="Wave One Timer" type="Timer" parent="SeekerSpawner"]
+
+[node name="Wave Two Timer" type="Timer" parent="SeekerSpawner"]
 
 [node name="Health Label" type="Label" parent="."]
 offset_left = 118.0
@@ -37,5 +39,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Portal" parent="." instance=ExtResource("5_wowpa")]
+position = Vector2(722.25574, 529.8617)
 
-[connection signal="timeout" from="SeekerSpawner/Timer" to="SeekerSpawner" method="timeout"]
+[connection signal="timeout" from="SeekerSpawner/Wave One Timer" to="SeekerSpawner" method="wave_one_timeout"]
+[connection signal="timeout" from="SeekerSpawner/Wave Two Timer" to="SeekerSpawner" method="wave_two_timeout"]

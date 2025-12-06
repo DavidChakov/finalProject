@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://3c1upayka4j" path="res://Scripts/portal.gd" id="1_j20fm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oi2tk"]
-radius = 50.0
+radius = 100.0
 
 [node name="Portal" type="Node2D"]
 script = ExtResource("1_j20fm")
@@ -14,5 +14,11 @@ script = ExtResource("1_j20fm")
 shape = SubResource("CircleShape2D_oi2tk")
 debug_color = Color(16.796896, 18.892157, 0, 0)
 
+[node name="Win Timer" type="Timer" parent="."]
+
+[node name="Spawn Timer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="Area2D" to="." method="body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="body_exited"]
+[connection signal="timeout" from="Win Timer" to="." method="win_timeout"]
+[connection signal="timeout" from="Spawn Timer" to="." method="spawn_timeout"]

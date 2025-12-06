@@ -6,8 +6,10 @@ var bullet_scene = load("res://Scenes/bullet_seeker.tscn")
 var shoot_timer = .4
 var move_speed = 50
 var health = 10
+var swap_dir = 1
 
 var type = "ENEMY"
+
 
 # Links var player to player node on ready
 @onready var player = get_parent().get_parent().get_node("Player")
@@ -20,8 +22,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	# Enemy alwats faces towards player
 	look_at(Vector2(player.position.x, player.position.y))
-	self.position.y += move_speed * delta
 	
+	if swap_dir % 2 != 0:
+		self.position.y += move_speed * delta
+	else:
+		self.position.y -= move_speed * delta
+		
 	if health <= 0:
 		queue_free()
 
@@ -43,4 +49,4 @@ func screen_entered() -> void:
 	$Timer.start()
 
 func screen_exited() -> void:
-	queue_free()
+	swap_dir += 1
