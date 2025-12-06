@@ -10,8 +10,8 @@ script = ExtResource("1_3m2mg")
 texture = ExtResource("2_3m2mg")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(-4, -4)
-target_position = Vector2(8, 8)
+position = Vector2(-6, -6)
+target_position = Vector2(13, 12)
 collide_with_areas = true
 collide_with_bodies = false
 

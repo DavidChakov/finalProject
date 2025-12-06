@@ -7,11 +7,12 @@
 script = ExtResource("1_jgufv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
 texture = ExtResource("2_jgufv")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(-4, -4)
-target_position = Vector2(8, 8)
+position = Vector2(-7, -7)
+target_position = Vector2(14, 14)
 collide_with_areas = true
 collide_with_bodies = false
 
